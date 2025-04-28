@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicando o nen</title>
+  <link rel="stylesheet" href="HxH.css">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+</head>
+<body>
+  
+  <div class="nen-simbolos">
+    <span class="simbolo">念</span>
+    <span class="simbolo delay1">力</span>
+    <span class="simbolo delay2">オーラ</span>
+    <span class="simbolo delay3">氣</span>
+  </div>
+  
+  <header>
+    <h1>O que é nen?</h1>
+  </header>
+
+  <section class="intro">
+    <img src="Nen-Types.webp" height="">
+    <p>
+      Nen é a técnica usada em Hunter x Hunter para manipular a aura, uma energia vital que flui em todos os seres vivos. Ela permite que os usuários realizem feitos extraordinários através de diferentes tipos e aplicações.
+    </p>
+  </section>
+
+  <!-- NOVA SEÇÃO: Técnicas básicas -->
+  <section class="nen-bases">
+    <h2>Técnicas Fundamentais do Nen</h2>
+    <div class="nen-container">
+      <button data-info="Ten mantém a aura ao redor do corpo e protege o usuário.">Ten</button>
+      <button data-info="Zetsu interrompe o fluxo de aura, tornando o usuário indetectável.">Zetsu</button>
+      <button data-info="Ren aumenta a aura e intensifica os ataques.">Ren</button>
+      <button data-info="Hatsu é a manifestação personalizada do Nen.">Hatsu</button>
+      <button data-info="Gyo permite enxergar aura em detalhes específicos.">Gyo</button>
+      <button data-info="In oculta a aura completamente.">In</button>
+      <button data-info="En expande a aura ao redor do corpo, detectando presença.">En</button>
+      <button data-info="Shu envolve objetos com aura para protegê-los.">Shu</button>
+      <button data-info="Ko foca toda a aura em um único ponto para máximo poder ofensivo.">Ko</button>
+      <button data-info="Ken é semelhante ao Ten, mas mais denso e duradouro.">Ken</button>
+    </div>
+    <div id="nen-info-box">Passe o mouse em uma técnica para ver mais.</div>
+  </section>
+
+  <!-- NOVA SEÇÃO: Teste da Água -->
+  <section class="agua-teste">
+    <h2>Teste da Água (Water Divination)</h2>
+    <p>O Teste da Água é um método usado para identificar o tipo de Nen de uma pessoa. O teste consiste em colocar uma folha sobre um copo cheio de água e o usuário deve colocar as mãos em volta. Dependendo do tipo de Nen, a água ou a folha reagirá de forma diferente:</p>
+    <ul>
+      <li><strong>Fortificação:</strong> O volume da água aumenta.</li>
+      <li><strong>Emissão:</strong> A água transborda para fora do copo.</li>
+      <li><strong>Manipulação:</strong> A folha se move sobre a superfície da água.</li>
+      <li><strong>Transmutação:</strong> O sabor da água muda.</li>
+      <li><strong>Conjuração:</strong> Um objeto aparece dentro da água.</li>
+      <li><strong>Especialização:</strong> Qualquer outro efeito bizarro ou único.</li>
+    </ul>
+    <img src="transferir.jpg" alt="Imagem ilustrando o Teste da Água" style="width: 100%; max-width: 400px; margin-top: 15px;">
+  </section>
+
+  <!-- Seção já existente: Tipos de Nen -->
+  <section class="cards">
+    <h2>Tipos de Nen</h2>
+    <div class="card-container">
+
+      <a href="fortificação.html" class="card">
+        <div class="card">
+          <img src="HxH2011_EP147_Gon_Portrait.webp" alt="Gon - Reforço">
+          <h3>Fortificação</h3>
+          <p>Aumentam as habilidades físicas. Gon é um exemplo clássico.</p>
+        </div>
+      </a>
+
+      <a href="emissão.html" class="card">
+        <div class="card">
+          <img src="leorio.webp" alt="Leorio - Emissão">
+          <h3>Emissão</h3>
+          <p>Emissores projetam seu Nen à distância. Leorio é um bom exemplo disso.</p>
+        </div>
+      </a>
+
+      <a href="especializacao.html" class="card">
+        <div class="card">
+          <img src="7b34fcaec171f2ab626ce98b1e03e93d48d64c3cr1-292-450v2_uhq.jpg" alt="Kurapika - Especialização">
+          <h3>Especialização</h3>
+          <p>Usuários com habilidades únicas que não seguem as regras normais do Nen. Kurapika, com olhos escarlates, é um exemplo.</p>
+        </div>
+      </a>
+
+      <a href="transmutacao.html" class="card">
+        <div class="card">
+          <img src="killua.webp" alt="Killua - Transmutação">
+          <h3>Transmutação</h3>
+          <p>Killua Zoldyck transforma sua aura em eletricidade.</p>
+        </div>
+      </a>
+
+      <a href="conjuracao.html" class="card">
+        <div class="card">
+          <img src="Kaito.jpg" alt="Kaito - Conjuração">
+          <h3>Conjuração</h3>
+          <p>Invoca objetos com Nen. Kaito usa o "Crazy Slots", um palhaço que invoca armas.</p>
+        </div>
+      </a>
+
+      <a href="manipulacao.html" class="card">
+        <div class="card">
+          <img src="illumi.jpg" alt="Illumi - Manipulação">
+          <h3>Manipulação</h3>
+          <p>Permite controlar seres ou objetos. Illumi usa agulhas imbuídas de Nen.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll('.nen-container button');
+    const infoBox = document.getElementById('nen-info-box');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('mouseover', () => {
+        infoBox.textContent = btn.dataset.info;
+      });
+      btn.addEventListener('mouseout', () => {
+        infoBox.textContent = 'Passe o mouse em uma técnica para ver mais.';
+      });
+    });
+  </script>
+
+</body>
+</html>

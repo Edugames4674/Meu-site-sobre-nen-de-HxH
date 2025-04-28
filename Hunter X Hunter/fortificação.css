@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:linear-gradient(rgb(255, 255, 255), rgb(179, 252, 106)) ;
+    color: #2d4032;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e1ffd6;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 80px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  h1, h2 {
+    color: #1fb665;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 30px;
+    font-size: 1.4em;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    list-style-type: none;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .nota {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #09e902;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .btn-voltar{
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color:rgb(128, 165, 90);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    transition: background-color 0.3s ease;
+    align-content: center;
+  }
+    .destaque {
+    background-color: #d4f5d0;
+    padding: 10px 15px;
+    border-left: 5px solid #82b999;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}

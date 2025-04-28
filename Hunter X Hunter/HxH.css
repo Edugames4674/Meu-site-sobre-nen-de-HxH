@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background:radial-gradient(white, rgb(176, 233, 119));
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+header{
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #62e63b;
+  padding: 20px;
+}
+header > h1{
+  font-size: 2.0rem;
+  color: #000000;
+}
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.cards {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cards h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #156915;
+}
+
+.card-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto; /* Centraliza na tela */
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s;
+  text-decoration:none;
+  color:black;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+
+.card h3 {
+  color: #54df42;
+  margin-bottom: 10px;
+}
+.fade-out{
+  opacity: 0;
+  transition: opacity 0.5 ease;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(176, 233, 119));
+  padding 20px;
+}
+.nen-simbolos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.simbolo {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.3;
+  animation: flutuar 10s linear infinite;
+}
+
+.simbolo:nth-child(1) {
+  left: 5%;
+  color: #ff4b4b; /* Fortificação - vermelho */
+  animation-delay: 0s;
+}
+.simbolo.delay1 {
+  left: 10%;
+  color: #4b94ff; /* Emissão - azul */
+  animation-delay: 2s;
+}
+.simbolo.delay2 {
+  right: 10%;
+  color: #b84bff; /* Manipulação - roxo */
+  animation-delay: 4s;
+}
+.simbolo.delay3 {
+  right: 5%;
+  color: #4bff76; /* Transformação - verde */
+  animation-delay: 6s;
+}
+
+
+.simbolo:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+.simbolo.delay1 {
+  left: 10%;
+  animation-delay: 2s;
+}
+.simbolo.delay2 {
+  right: 10%;
+  animation-delay: 4s;
+}
+.simbolo.delay3 {
+  right: 5%;
+  animation-delay: 6s;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 100%;
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    top: -10%;
+    transform: translateY(-100%) rotate(360deg);
+    opacity: 0;
+  }
+}
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 40%);
+}
+
+body::after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 40%);
+}
+/* Seção das técnicas */
+.nen-tecnicas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: centerz
+  background-color: #eaffd0;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Botões de técnicas */
+.nen-container button {
+  background: linear-gradient(145deg, #c5f1a4, #eaffd0);
+  color: #2d8b31;
+  border: 5px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nen-tecnicas button:hover {
+  background: #4e4e4e;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+/* Caixa de informações do Nen */
+#nen-info-box {
+  text-align: center;
+  background-color: #ffffffc2;
+  border: 2px solid #000000;
+  padding: 15px;
+  border-radius: 15px;
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Teste da Água */
+.agua-teste {
+  background-color: #f1ffe0;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 1.1em;
+}
+
+.water-test h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #2e6600;
+}
